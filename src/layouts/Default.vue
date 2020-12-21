@@ -1,14 +1,15 @@
 <template>
   <div >
     <el-container>
-       <!-- <section class="page-header" :style="'background-image: linear-gradient(120deg, '+backgroundColorLeft+', '+backgroundColorRight+');color: '+fontColor+';'">
-            <div >
-              {{ general}}
-              
-            </div>
-        </section> -->
+     <section class="page-header" >
+     
+           
+            <h1 class="project-name">janetwu</h1>
+            <h2 class="project-tagline"> welcome </h2>
+            <g-link to="https://github.com/janetwu1"  class="btn" target="_blank">GitHub主页</g-link>
+            <g-link to="https://github.com/janetwu1/blog"  class="btn" target="_blank">博客源码</g-link>
 
- 
+        </section>
       <section class="main-content">
         <div class="el-row">
           <div class="el-col el-col-6" style="padding-right: 10px">
@@ -101,6 +102,8 @@
   </div>
 </template>
 
+
+
 <static-query>
 query {
   metadata {
@@ -109,12 +112,10 @@ query {
 }
 </static-query>
 <script>
+// import head from '../layouts/head.vue'
+
 export default {
-  computed:{
-    general(){
-      return this.$page.general.edges[0].node
-    }
-  }
+  
 }
 </script>
 <style>

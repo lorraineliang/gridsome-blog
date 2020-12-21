@@ -16,7 +16,7 @@
                                         <i class="el-icon-message"></i>&emsp;
                                         <g-link :to="edge.node.url" target="_blank" style=" text-decoration:none;cursor:pointer">TA的主页</g-link>
                                         <br>
-                                        <img :src="'http://localhost:1337'+edge.node.avatar.url" style="width: 100%;border-radius:5px;margin-top: 5px">
+                                        <img :src="GRIDSOME_API_URL+edge.node.avatar.url" style="width: 100%;border-radius:5px;margin-top: 5px">
                                     </el-card>
                                 </el-col>
                             </el-row>

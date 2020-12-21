@@ -1,17 +1,16 @@
 <template>
+
 <div>
-    <section class="page-header" :style="'background-image: linear-gradient(120deg, '+backgroundColorLeft+', '+backgroundColorRight+');color: '+fontColor+';'">
-            <div style="position:absolute; top:20px; right:20px; z-index:2;">
-                <!-- <el-tooltip effect="dark" :content="fullButton.full?'退出':'全屏'" placement="bottom-end">
-                    <el-button @click="full" :icon="fullButton.full?'el-icon-close':'el-icon-rank'" circle></el-button>
-                </el-tooltip> -->
-            </div>
+          
+     <!-- <section class="page-header" v-for="edge in $page.general.edges" :key="edge.node[1]" >
+     
            
-            <h1 class="project-name">{{general.title}}</h1>
-            <h2 class="project-tagline">{{general.description}}</h2>
+            <h1 class="project-name"> {{ edge.node.title}}</h1>
+            <h2 class="project-tagline"> {{ edge.node.description}} </h2>
             <a :href="'https://github.com/'+janetwu1" class="btn" target="_blank">GitHub主页</a>
             <a href="https://github.com/janetwu1/vblog" class="btn" target="_blank" v-if="!mini">博客源码</a>
-        </section>
+        </section> -->
+
   <Layout>
     
          <div class="el-col el-col-18" style="padding-left: 10px;">
@@ -42,10 +41,6 @@
                         padding: 5px 0px;
                       "
                     >
-                      <!-- <pre style="font-family: 微软雅黑">
-{{ $page.posts.edges[0].node.description }}
-</pre
-                      > -->
                     </div>
                     <div class="markdown-body" style="padding-top: 20px" v-html="mdHtml($page.posts.edges[0].node.content)" >
                  
@@ -70,7 +65,7 @@
             </section>
           </div>
   </Layout>
-  </div>
+ </div>
 </template>
 <page-query>
 query{
@@ -85,18 +80,7 @@ query{
       }
     }
   }
-  general: allStrapiGeneral{
-    edges{
-      node{
-        id,
-        title,
-        description,
-        cover{
-          url
-        }
-      }
-    }
-  }
+
 
 }
 </page-query>
@@ -107,12 +91,7 @@ const md=new markdownIt()
 
 export default {
     name:'homePage',
-    components: { Layout },
-    computed:{
-    general(){
-      return this.$page.general.edges[0].node
-    }
-  },
+    components: { Layout }, 
     methods:{
       mdHtml(markdown){
         return md.render(markdown)
