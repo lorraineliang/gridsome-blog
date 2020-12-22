@@ -1,6 +1,6 @@
 <template>
  <Layout>
-         <div style="min-height: 600px" v-loading="loading">
+         <div style="min-height: 600px" >
         <el-card shadow="never" style="min-height: 400px">
             <div slot="header">
                 <el-row>
