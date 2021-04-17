@@ -1,15 +1,22 @@
 <template>
-  <div >
+  <div>
     <el-container>
-     <section class="page-header" >
-     
-           
-            <h1 class="project-name">janetwu</h1>
-            <h2 class="project-tagline"> welcome </h2>
-            <g-link to="https://github.com/janetwu1"  class="btn" target="_blank">GitHub主页</g-link>
-            <g-link to="https://github.com/janetwu1/blog"  class="btn" target="_blank">博客源码</g-link>
-
-        </section>
+      <section class="page-header">
+        <h1 class="project-name">lorraineliang</h1>
+        <h2 class="project-tagline">welcome</h2>
+        <g-link
+          to="https://github.com/lorraineliang"
+          class="btn"
+          target="_blank"
+          >GitHub主页</g-link
+        >
+        <g-link
+          to="https://github.com/lorraineliang/gridsome-blog"
+          class="btn"
+          target="_blank"
+          >博客源码</g-link
+        >
+      </section>
       <section class="main-content">
         <div class="el-row">
           <div class="el-col el-col-6" style="padding-right: 10px">
@@ -24,8 +31,9 @@
                       class="el-menu-item is-active"
                       style="padding-left: 20px"
                     >
-                     <g-link  to="/"><i class="el-icon-star-off"></i> 最新动态</g-link>
-                    
+                      <g-link to="/"
+                        ><i class="el-icon-star-off"></i> 最新动态</g-link
+                      >
                     </li>
                     <li
                       role="menuitem"
@@ -33,7 +41,10 @@
                       class="el-menu-item"
                       style="padding-left: 20px"
                     >
-                         <g-link to="/social"><i class="el-icon-mobile-phone"></i> <span>社交圈</span></g-link>
+                      <g-link to="/social"
+                        ><i class="el-icon-mobile-phone"></i>
+                        <span>社交圈</span></g-link
+                      >
                       <!-- <g-link to="/social"><i class="el-icon-mobile-phone"></i> <span>社交圈</span></g-link> -->
                     </li>
                     <li
@@ -43,7 +54,10 @@
                       style="padding-left: 20px"
                     >
                       <!-- <i class="el-icon-edit-outline"></i> <span>博客列表</span> -->
-                       <g-link to="/blog"><i class="el-icon-edit-outline"></i> <span>博客列表</span></g-link>
+                      <g-link to="/blog"
+                        ><i class="el-icon-edit-outline"></i>
+                        <span>博客列表</span></g-link
+                      >
                     </li>
                     <li
                       role="menuitem"
@@ -51,14 +65,17 @@
                       class="el-menu-item"
                       style="padding-left: 20px"
                     >
-                      <g-link to="/project"> <i class="el-icon-service"></i> <span>开源项目</span></g-link>
+                      <g-link to="/project">
+                        <i class="el-icon-service"></i>
+                        <span>开源项目</span></g-link
+                      >
                     </li>
-             
+
                     <!----><!----><!----><!----><!----><!----><!---->
                   </ul>
                 </div>
               </div>
-             
+
               <div>
                 <div class="el-dialog__wrapper" style="display: none">
                   <div class="el-dialog" style="width: 500px; margin-top: 15vh">
@@ -94,25 +111,14 @@
               </div>
             </div>
           </div>
-        <slot></slot>
+          <slot></slot>
         </div>
       </section>
       <el-footer></el-footer>
     </el-container>
   </div>
 </template>
-
-
-
-<static-query>
-query {
-  metadata {
-    siteName
-  }
-}
-</static-query>
 <script>
-// import head from '../layouts/head.vue'
 
 export default {
   
@@ -150,7 +156,7 @@ body {
   color: #fff;
   text-align: center;
   background-color: #159957;
-  background-image: linear-gradient(120deg, #155799, #159957);
+  background-image: linear-gradient(120deg, #159957, #155799, #8e75fb);
 }
 
 .project-name {

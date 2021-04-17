@@ -17,10 +17,9 @@ module.exports = {
     {
       use: '@gridsome/source-strapi',
       options: {
-        //  apiURL: 'http://janet.show:1337/',
         apiURL: process.env.GRIDSOME_API_URL,
         queryLimit: 1000, // Defaults to 100
-        contentTypes: ['post','social','project'],//StrapiPost
+        contentTypes: ['post', 'social', 'project'],//StrapiPost
         //  singleTypes: ['general'],
         // Possibility to login with a Strapi user,
         // when content types are not publicly available (optional).
@@ -31,17 +30,17 @@ module.exports = {
       }
     }
   ],
-  templates:{
-    StrapiPost:[
+  templates: {
+    StrapiPost: [
       {
-        path:'/post/:id',
-        component:'./src/templates/Post.vue'
+        path: '/post/:id',
+        component: './src/templates/Post.vue'
       }
     ],
-    StrapiProject:[
+    StrapiProject: [
       {
-        path:'/projectDetail/:id',
-        component:'./src/templates/Project.vue'
+        path: '/projectDetail/:id',
+        component: './src/templates/Project.vue'
       }
     ],
 

@@ -1,34 +1,39 @@
 <template>
   <Layout>
-    
-     <div class="el-col el-col-18">
-    
-        <div v-for="edge in $page.posts.edges" :key="edge.node.id">
-          <el-card>
-           <div class="el-card__header">
-          <el-row>
-            <el-col>
-              <span>
-<g-link :to="'/post/'+ edge.node.id">
-              {{ edge.node.title }}
-          </g-link>
-              </span>
-            </el-col>
-          </el-row>
-           </div>
-    <div class="el-card__body">
-           <div style="font-size: 0.9rem;line-height: 1.5;color: #606c71;">
-            {{ edge.node.updated_at }}
+    <div class="el-col el-col-18">
+      <div v-for="edge in $page.posts.edges" :key="edge.node.id">
+        <el-card>
+          <div class="el-card__header">
+            <el-row>
+              <el-col>
+                <span>
+                  <g-link :to="'/post/' + edge.node.id">
+                    {{ edge.node.title }}
+                  </g-link>
+                </span>
+              </el-col>
+            </el-row>
+          </div>
+          <div class="el-card__body">
+            <div style="font-size: 0.9rem; line-height: 1.5; color: #606c71">
+              {{ edge.node.updated_at | date }}
             </div>
-             <div style="font-size: 1.1rem;line-height: 1.5;color: #303133;padding: 10px 0px 0px 0px">
-          {{ edge.node.description }}
-           </div>
-           </div>
-              </el-card>
-        </div>
-           <!-- 分页 -->
-       <Pager :info="$page.posts.pageInfo"/>
-     </div>
+            <div
+              style="
+                font-size: 1.1rem;
+                line-height: 1.5;
+                color: #303133;
+                padding: 10px 0px 0px 0px;
+              "
+            >
+              {{ edge.node.description }}
+            </div>
+          </div>
+        </el-card>
+      </div>
+      <!-- 分页 -->
+      <Pager :info="$page.posts.pageInfo" />
+    </div>
   </Layout>
 </template>
 <page-query>
@@ -64,7 +69,7 @@ name:"blog",
 </script>
 
 <style>
-.el-card{
+.el-card {
   margin-bottom: 10px;
 }
 </style>
